@@ -24,5 +24,6 @@ UPDATE=\
 
 <$PLAN9/src/mkone
 YFLAGS=-D1 -d
+BIN=../bin
 
 lex.$O:	../cc/macbody ../cc/lexbody ../cc/compat

@@ -26,9 +26,9 @@ HFILES=\
 
 LIB=../cc/cc.a$O
 
-BIN=/tmp/bin
 <$PLAN9/src/mkone
 
+BIN=../bin
 $LIB:
 	cd ../cc
 	mk install
