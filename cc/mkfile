@@ -1,5 +1,7 @@
 <$PLAN9/src/mkhdr
 
+CFLAGS="-O0 -Wno-char-subscripts -Wno-array-bounds -Wno-deprecated-declarations"
+
 LIB=cc.a$O
 OFILES=\
 	y.tab.$O\
