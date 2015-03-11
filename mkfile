@@ -25,4 +25,4 @@ clean:
 	done
 
 nuke: clean
-	rm -f bin/*
+	rm -rf bin
