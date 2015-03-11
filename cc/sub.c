@@ -1014,7 +1014,7 @@ no:
  * return log(n) if n is a power of 2 constant
  */
 int
-log2(uvlong v)
+_log2(uvlong v)
 {
 	int s, i;
 	uvlong m;
@@ -1041,7 +1041,7 @@ vlog(Node *n)
 	if(typefd[n->type->etype])
 		goto bad;
 
-	return log2(n->vconst);
+	return _log2(n->vconst);
 
 bad:
 	return -1;

@@ -2,7 +2,7 @@
 
 /* default, like old cc */
 int
-machcap(Node*)
+machcap(Node* _)
 {
 	return 0;
 }
