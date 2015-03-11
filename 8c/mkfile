@@ -1,4 +1,6 @@
-</$objtype/mkfile
+<$PLAN9/src/mkhdr
+
+CFLAGS="-I. -O0 -Wno-char-subscripts -Wno-array-bounds -Wno-deprecated-declarations"
 
 TARG=8c
 OFILES=\
@@ -24,13 +26,13 @@ HFILES=\
 
 LIB=../cc/cc.a$O
 
-BIN=/$objtype/bin
-</sys/src/cmd/mkone
+BIN=/tmp/bin
+<$PLAN9/src/mkone
 
 $LIB:
 	cd ../cc
 	mk install
-	mk clean
+	#mk clean
 
 
 %.$O: ../cc/%.c
@@ -38,4 +40,4 @@ $LIB:
 
 
 enam.c:	8.out.h
-	rc mkenam
+	rc ./mkenam
