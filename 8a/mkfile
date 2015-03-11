@@ -1,4 +1,6 @@
-</$objtype/mkfile
+<$PLAN9/src/mkhdr
+
+CFLAGS="-I. -O0 -Wno-char-subscripts -Wno-array-bounds -Wno-deprecated-declarations"
 
 TARG=8a
 OFILES=\
@@ -20,7 +22,7 @@ UPDATE=\
 	a.h\
 	${TARG:%=/386/bin/%}\
 
-< /sys/src/cmd/mkone
+<$PLAN9/src/mkone
 YFLAGS=-D1 -d
 
 lex.$O:	../cc/macbody ../cc/lexbody ../cc/compat
