@@ -1,4 +1,4 @@
-</$objtype/mkfile
+<$PLAN9/src/mkhdr
 
 LIB=cc.a$O
 OFILES=\
@@ -26,15 +26,21 @@ YFILES=cc.y\
 CURCC=6c 8c qc vc
 OTHERCC=1c 2c 5c 7c kc
 
-</sys/src/cmd/mklib
+LIBOBJ=${OFILES:%=$LIB(%)}
+
+<$PLAN9/src/mklib
 
 install:V:	$LIB
 	date
 
 $LIB:	$LIBOBJ
-	ar vu $LIB $OFILES
+	$AR rsc $LIB $OFILES
 
-mac.$O:	macbody
+# There seems to be a bug in plan9port's mk.
+# The following recipe thinks that mac.$O depends
+# on macbody.$O instead of just macbody. If you
+# update macbody, make sure you mk clean first
+#mac.$O:	macbody
 
 everything:V:
 	# mk the current compilers
