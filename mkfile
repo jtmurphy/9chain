@@ -3,7 +3,10 @@
 C386="8c 8a 8l"
 CALL=$C386 cc
 
-all: 386
+all: bindir 386
+
+bindir:
+	mkdir -p bin
 
 386:
 	for i in $C386
