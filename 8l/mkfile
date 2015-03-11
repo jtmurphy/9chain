@@ -1,4 +1,6 @@
-</$objtype/mkfile
+<$PLAN9/src/mkhdr
+
+CFLAGS="-I. -O0 -Wno-char-subscripts -Wno-array-bounds -Wno-deprecated-declarations"
 
 TARG=8l
 OFILES=\
@@ -24,7 +26,7 @@ UPDATE=\
 	$CFILES\
 	${TARG:%=/386/bin/%}\
 
-</sys/src/cmd/mkone
+<$PLAN9/src/mkone
 
 enam.$O:	../8c/enam.c
 	$CC $CFLAGS ../8c/enam.c
