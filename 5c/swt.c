@@ -620,7 +620,7 @@ align(long i, Type *t, int op)
 		w = SZ_LONG;	/* because of a pun in cc/dcl.c:contig() */
 		break;
 	}
-	o = round(o, w);
+	o = _round(o, w);
 	if(debug['A'])
 		print("align %s %ld %T = %ld\n", bnames[op], i, t, o);
 	return o;
@@ -629,7 +629,7 @@ align(long i, Type *t, int op)
 long
 maxround(long max, long v)
 {
-	v = round(v, SZ_LONG);
+	v = _round(v, SZ_LONG);
 	if(v > max)
 		return v;
 	return max;

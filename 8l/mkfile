@@ -17,7 +17,6 @@ HFILES=\
 	l.h\
 	../8c/8.out.h\
 
-BIN=/$objtype/bin
 CFILES=${OFILES:%.$O=%.c}
 CFILES=${CFILES:enam.c=../8c/enam.c}
 UPDATE=\

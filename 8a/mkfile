@@ -14,7 +14,6 @@ HFILES=\
 
 YFILES=a.y\
 
-BIN=/$objtype/bin
 UPDATE=\
 	mkfile\
 	a.y\

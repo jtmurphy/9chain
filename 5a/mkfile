@@ -1,4 +1,6 @@
-</$objtype/mkfile
+<$PLAN9/src/mkhdr
+
+CFLAGS="-I. -O0 -Wno-char-subscripts -Wno-array-bounds -Wno-deprecated-declarations"
 
 TARG=5a
 OFILES=\
@@ -12,8 +14,8 @@ HFILES=\
 
 YFILES=a.y\
 
-BIN=/$objtype/bin
-< /sys/src/cmd/mkone
+<$PLAN9/src/mkone
 YFLAGS=-D1 -d
+BIN=../bin
 
 lex.$O:	../cc/macbody ../cc/lexbody

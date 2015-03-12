@@ -1,4 +1,6 @@
-</$objtype/mkfile
+<$PLAN9/src/mkhdr
+
+CFLAGS="-I. -O0 -Wno-char-subscripts -Wno-array-bounds -Wno-deprecated-declarations"
 
 TARG=5l
 OFILES=\
@@ -16,8 +18,9 @@ HFILES=\
 	l.h\
 	../5c/5.out.h\
 
-BIN=/$objtype/bin
-</sys/src/cmd/mkone
+<$PLAN9/src/mkone
+
+BIN=../bin
 
 ../5c/enam.c: ../5c/5.out.h
 	@ { cd ../5c; mk enam.c }
